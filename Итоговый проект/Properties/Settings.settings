@@ -34,5 +34,11 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=HOME-PC;Initial Catalog=SchooleDb;Integrated Security=True</Value>
     </Setting>
+    <Setting Name="Список" Type="System.String" Scope="User">
+      <Value Profile="(Default)">contextMenuStrip1</Value>
+    </Setting>
+    <Setting Name="nq" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

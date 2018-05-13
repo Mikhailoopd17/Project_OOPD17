@@ -47,6 +47,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
@@ -58,6 +59,7 @@
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -69,11 +71,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\AddParents.cs">
+    <Compile Include="Entity\Parent.cs" />
+    <Compile Include="Entity\Person.cs" />
+    <Compile Include="Entity\Children.cs" />
+    <Compile Include="Forms\ListPrint.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AddParents.Designer.cs">
-      <DependentUpon>AddParents.cs</DependentUpon>
+    <Compile Include="Forms\ListPrint.Designer.cs">
+      <DependentUpon>ListPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ParentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ParentsForm.Designer.cs">
+      <DependentUpon>ParentsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Authorization.cs">
       <SubType>Form</SubType>
@@ -81,8 +92,28 @@
     <Compile Include="Forms\Authorization.Designer.cs">
       <DependentUpon>Authorization.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\listForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\listForm.Designer.cs">
+      <DependentUpon>listForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rating.Designer.cs">
+      <DependentUpon>Rating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Plugins\Coder.cs" />
     <Compile Include="Plugins\ControlDatabase.cs" />
+    <Compile Include="Plugins\ControlViewTable.cs" />
+    <Compile Include="Plugins\FillDataBase%28TEST%29.cs" />
     <Compile Include="Plugins\KeyPressCheck.cs" />
     <Compile Include="Forms\mainMenu.cs">
       <SubType>Form</SubType>
@@ -96,33 +127,27 @@
     <Compile Include="Forms\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
-    <Compile Include="SchooleDbDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SchooleDbDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Delete.cs">
+    <Compile Include="Forms\ViewChildren.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Delete.Designer.cs">
-      <DependentUpon>Delete.cs</DependentUpon>
+    <Compile Include="Forms\ViewChildren.Designer.cs">
+      <DependentUpon>ViewChildren.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ViewUpdate.cs">
+    <Compile Include="Forms\ChildrenForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ViewUpdate.Designer.cs">
-      <DependentUpon>ViewUpdate.cs</DependentUpon>
+    <Compile Include="Forms\ChildrenForm.Designer.cs">
+      <DependentUpon>ChildrenForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\addChildren.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\addChildren.Designer.cs">
-      <DependentUpon>addChildren.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Plugins\SerializerControl.cs" />
+    <Compile Include="Plugins\TempExchange.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\AddParents.resx">
-      <DependentUpon>AddParents.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ListPrint.resx">
+      <DependentUpon>ListPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ParentsForm.resx">
+      <DependentUpon>ParentsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
@@ -130,17 +155,23 @@
     <EmbeddedResource Include="Forms\mainMenu.resx">
       <DependentUpon>mainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\listForm.resx">
+      <DependentUpon>listForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rating.resx">
+      <DependentUpon>Rating.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Delete.resx">
-      <DependentUpon>Delete.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ViewUpdate.resx">
-      <DependentUpon>ViewUpdate.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ViewChildren.resx">
+      <DependentUpon>ViewChildren.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\addChildren.resx">
-      <DependentUpon>addChildren.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ChildrenForm.resx">
+      <DependentUpon>ChildrenForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -151,6 +182,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -161,17 +193,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SchooleDbDataSet.xsc">
-      <DependentUpon>SchooleDbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="SchooleDbDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SchooleDbDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SchooleDbDataSet.xss">
-      <DependentUpon>SchooleDbDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

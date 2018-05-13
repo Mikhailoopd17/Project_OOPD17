@@ -1,6 +1,6 @@
 ﻿namespace Итоговый_проект
 {
-    partial class addChildren
+    partial class AddChildren
     {
         /// <summary>
         /// Required designer variable.
@@ -48,15 +48,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txNumClass = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txLiter = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btAddParents = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnPar2Add = new System.Windows.Forms.Button();
+            this.btnPar1Add = new System.Windows.Forms.Button();
+            this.tbFirstPar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbSecondPar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -69,7 +70,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnCancel.Location = new System.Drawing.Point(567, 368);
+            this.btnCancel.Location = new System.Drawing.Point(588, 368);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(123, 37);
             this.btnCancel.TabIndex = 0;
@@ -83,11 +84,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btAdd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btAdd.Location = new System.Drawing.Point(418, 368);
+            this.btAdd.Location = new System.Drawing.Point(464, 368);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(118, 37);
             this.btAdd.TabIndex = 1;
-            this.btAdd.Text = "ОК";
+            this.btAdd.Text = "Добавить";
             this.btAdd.UseVisualStyleBackColor = true;
             this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
@@ -192,7 +193,6 @@
             this.rbJ.TabStop = true;
             this.rbJ.Text = "жен";
             this.rbJ.UseVisualStyleBackColor = true;
-            this.rbJ.CheckedChanged += new System.EventHandler(this.rbJ_CheckedChanged);
             // 
             // rbM
             // 
@@ -208,7 +208,6 @@
             this.rbM.TabStop = true;
             this.rbM.Text = "муж";
             this.rbM.UseVisualStyleBackColor = true;
-            this.rbM.CheckedChanged += new System.EventHandler(this.rbM_CheckedChanged);
             // 
             // label15
             // 
@@ -217,7 +216,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(345, 67);
+            this.label15.Location = new System.Drawing.Point(377, 67);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(36, 19);
             this.label15.TabIndex = 23;
@@ -265,7 +264,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblName.Location = new System.Drawing.Point(345, 29);
+            this.lblName.Location = new System.Drawing.Point(377, 29);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(37, 19);
             this.lblName.TabIndex = 16;
@@ -311,14 +310,14 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.button1);
-            this.groupBox4.Controls.Add(this.textBox14);
+            this.groupBox4.Controls.Add(this.txNumClass);
             this.groupBox4.Controls.Add(this.label19);
-            this.groupBox4.Controls.Add(this.textBox15);
+            this.groupBox4.Controls.Add(this.txLiter);
             this.groupBox4.Controls.Add(this.label21);
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox4.Location = new System.Drawing.Point(12, 219);
+            this.groupBox4.Location = new System.Drawing.Point(471, 219);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(263, 122);
+            this.groupBox4.Size = new System.Drawing.Size(237, 143);
             this.groupBox4.TabIndex = 18;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Информация о классе";
@@ -329,24 +328,24 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(34, 73);
+            this.button1.Location = new System.Drawing.Point(16, 95);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(181, 34);
+            this.button1.Size = new System.Drawing.Size(185, 28);
             this.button1.TabIndex = 19;
             this.button1.Text = "Табель успеваемости";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox14
+            // txNumClass
             // 
-            this.textBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txNumClass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox14.Location = new System.Drawing.Point(89, 29);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(38, 26);
-            this.textBox14.TabIndex = 15;
+            this.txNumClass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txNumClass.Location = new System.Drawing.Point(89, 45);
+            this.txNumClass.Name = "txNumClass";
+            this.txNumClass.Size = new System.Drawing.Size(38, 26);
+            this.txNumClass.TabIndex = 15;
             // 
             // label19
             // 
@@ -355,22 +354,22 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label19.Location = new System.Drawing.Point(12, 32);
+            this.label19.Location = new System.Drawing.Point(12, 48);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(71, 19);
             this.label19.TabIndex = 16;
             this.label19.Text = "№ класса";
             // 
-            // textBox15
+            // txLiter
             // 
-            this.textBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txLiter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox15.Location = new System.Drawing.Point(199, 28);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(38, 26);
-            this.textBox15.TabIndex = 17;
+            this.txLiter.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txLiter.Location = new System.Drawing.Point(190, 44);
+            this.txLiter.Name = "txLiter";
+            this.txLiter.Size = new System.Drawing.Size(31, 26);
+            this.txLiter.TabIndex = 17;
             // 
             // label21
             // 
@@ -379,7 +378,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(142, 32);
+            this.label21.Location = new System.Drawing.Point(133, 48);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(51, 19);
             this.label21.TabIndex = 18;
@@ -387,43 +386,59 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btAddParents);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.btnPar2Add);
+            this.groupBox2.Controls.Add(this.btnPar1Add);
+            this.groupBox2.Controls.Add(this.tbFirstPar);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.tbSecondPar);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox2.Location = new System.Drawing.Point(292, 219);
+            this.groupBox2.Location = new System.Drawing.Point(12, 219);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(359, 143);
+            this.groupBox2.Size = new System.Drawing.Size(442, 143);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Информация о родителях";
             // 
-            // btAddParents
+            // btnPar2Add
             // 
-            this.btAddParents.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnPar2Add.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btAddParents.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btAddParents.Location = new System.Drawing.Point(95, 94);
-            this.btAddParents.Name = "btAddParents";
-            this.btAddParents.Size = new System.Drawing.Size(217, 34);
-            this.btAddParents.TabIndex = 19;
-            this.btAddParents.Text = "Добавить / Редактировать";
-            this.btAddParents.UseVisualStyleBackColor = true;
-            this.btAddParents.Click += new System.EventHandler(this.btAddParents_Click);
+            this.btnPar2Add.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnPar2Add.Location = new System.Drawing.Point(332, 72);
+            this.btnPar2Add.Name = "btnPar2Add";
+            this.btnPar2Add.Size = new System.Drawing.Size(92, 34);
+            this.btnPar2Add.TabIndex = 20;
+            this.btnPar2Add.Text = "Добавить";
+            this.btnPar2Add.UseVisualStyleBackColor = true;
+            this.btnPar2Add.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // btnPar1Add
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnPar1Add.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(98, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(246, 26);
-            this.textBox1.TabIndex = 15;
+            this.btnPar1Add.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnPar1Add.Location = new System.Drawing.Point(332, 23);
+            this.btnPar1Add.Name = "btnPar1Add";
+            this.btnPar1Add.Size = new System.Drawing.Size(92, 34);
+            this.btnPar1Add.TabIndex = 19;
+            this.btnPar1Add.Text = "Добавить";
+            this.btnPar1Add.UseVisualStyleBackColor = true;
+            this.btnPar1Add.Click += new System.EventHandler(this.btAddParents_Click);
+            // 
+            // tbFirstPar
+            // 
+            this.tbFirstPar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbFirstPar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbFirstPar.Location = new System.Drawing.Point(135, 28);
+            this.tbFirstPar.Name = "tbFirstPar";
+            this.tbFirstPar.ReadOnly = true;
+            this.tbFirstPar.Size = new System.Drawing.Size(169, 26);
+            this.tbFirstPar.TabIndex = 15;
             // 
             // label2
             // 
@@ -432,22 +447,23 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(21, 28);
+            this.label2.Location = new System.Drawing.Point(6, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 19);
+            this.label2.Size = new System.Drawing.Size(123, 19);
             this.label2.TabIndex = 16;
-            this.label2.Text = "Мама";
+            this.label2.Text = "Родитель/опекун";
             // 
-            // textBox2
+            // tbSecondPar
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tbSecondPar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(98, 56);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(246, 26);
-            this.textBox2.TabIndex = 17;
+            this.tbSecondPar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbSecondPar.Location = new System.Drawing.Point(135, 77);
+            this.tbSecondPar.Name = "tbSecondPar";
+            this.tbSecondPar.ReadOnly = true;
+            this.tbSecondPar.Size = new System.Drawing.Size(169, 26);
+            this.tbSecondPar.TabIndex = 17;
             // 
             // label3
             // 
@@ -456,13 +472,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(22, 59);
+            this.label3.Location = new System.Drawing.Point(6, 80);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 19);
+            this.label3.Size = new System.Drawing.Size(123, 19);
             this.label3.TabIndex = 18;
-            this.label3.Text = "Папа";
+            this.label3.Text = "Родитель/опекун";
             // 
-            // addChildren
+            // AddChildren
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
@@ -472,7 +488,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.btnCancel);
-            this.Name = "addChildren";
+            this.Name = "AddChildren";
             this.Text = "Добавить ученика";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -487,34 +503,35 @@
         #endregion
 
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.RadioButton rbJ;
         private System.Windows.Forms.RadioButton rbM;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txFnameChild;
-        private System.Windows.Forms.TextBox txNameChild;
+        public System.Windows.Forms.TextBox txFnameChild;
+        public System.Windows.Forms.TextBox txNameChild;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox txSnameChild;
+        public System.Windows.Forms.TextBox txSnameChild;
         private System.Windows.Forms.Label lb2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txAdress;
+        public System.Windows.Forms.TextBox txAdress;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.MaskedTextBox txDateOfB;
-        private System.Windows.Forms.MaskedTextBox txPhone;
+        public System.Windows.Forms.MaskedTextBox txDateOfB;
+        public System.Windows.Forms.MaskedTextBox txPhone;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox14;
+        public System.Windows.Forms.TextBox txNumClass;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox15;
+        public System.Windows.Forms.TextBox txLiter;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btAddParents;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbFirstPar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbSecondPar;
         private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Button btAdd;
+        public System.Windows.Forms.Button btnPar1Add;
+        public System.Windows.Forms.Button btnPar2Add;
     }
 }

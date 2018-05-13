@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Итоговый_проект.Children">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAgAAAAAAAAAAAAAAAAEBAAAAAEoAAAYAAAA=</HashCode>
+      <FileName>Entity\Children.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.Parent">
+    <Position X="5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAIABAAAAAAAQgAAAAAAAAAAEBAAAAAAQABAAAAAA=</HashCode>
+      <FileName>Entity\Parent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.Person">
+    <Position X="2.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIYAAgAAAAAAAACAAAAAAAAAAAkBAAACAAAAIAAAAAA=</HashCode>
+      <FileName>Entity\Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.Authorization" Collapsed="true">
+    <Position X="11.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAEABAAAACAAIACAACYAAAAAGEAAAAAAAA=</HashCode>
+      <FileName>Forms\Authorization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.AddChildren" Collapsed="true">
+    <Position X="8" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>pwQAIAAAoKACFFEEAACEAEAScAAICIGoAGAEAAAAQCI=</HashCode>
+      <FileName>Forms\ChildrenForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.viewTable" Collapsed="true">
+    <Position X="15" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAAAIAEiAAABAAAACAAAACAOgoAQAAEKACEBAAIAI=</HashCode>
+      <FileName>Forms\Delete.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.mainMenu" Collapsed="true">
+    <Position X="8" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BARAAAAABCAAABBAAACAAAASAGA4ICgEAHAKAAAAAAA=</HashCode>
+      <FileName>Forms\mainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.AddParents" Collapsed="true">
+    <Position X="9.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>8QQAAEAAAIACABEDAIAAoIACAAAAAECoAEBAEAEEAAY=</HashCode>
+      <FileName>Forms\ParentsForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.Registration" Collapsed="true">
+    <Position X="13.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACDACYAABEAEACAAMACAAGAAkAQAAAAAAAABAA=</HashCode>
+      <FileName>Forms\Registration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.ViewUpdate" Collapsed="true">
+    <Position X="8" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAgABlyAgAlBQBACQAAASgCD6ZwACAOEBQAAAAAM=</HashCode>
+      <FileName>Forms\ViewChildren.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.Coder" Collapsed="true">
+    <Position X="13.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Plugins\Coder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.ControlDatabase" Collapsed="true">
+    <Position X="15" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAABAAAAAAAAAAAAgBCAAAEAIAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Plugins\ControlDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.KeyPressCheck" Collapsed="true">
+    <Position X="11.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQIAQAA=</HashCode>
+      <FileName>Plugins\KeyPressCheck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.Program" Collapsed="true">
+    <Position X="9.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.Forms.listForm" Collapsed="true">
+    <Position X="13.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwACAABgGAAABIAAACAAAIGAAE4AAAAAGQIAAAAABA=</HashCode>
+      <FileName>Forms\listForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.Forms.ListPrint" Collapsed="true">
+    <Position X="15" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAACAAAAQAAACAAAACAAAoAQqAAAAAAAAAAAA=</HashCode>
+      <FileName>Forms\ListPrint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.Forms.Rating" Collapsed="true">
+    <Position X="11.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAASAgABAQAACCAAACQAA4AAAABEAAAAAAAAA=</HashCode>
+      <FileName>Forms\Rating.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.Forms.ReportForm" Collapsed="true">
+    <Position X="15" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAIAAQBAACAAAACAAAIASKAAEAAgAABACA=</HashCode>
+      <FileName>Forms\ReportForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.Plugins.ControlViewTable" Collapsed="true">
+    <Position X="8" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Plugins\ControlViewTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.Plugins.FillDataBase" Collapsed="true">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABCAAQAIAAAACAAQAAAIACAAgAAAAAABAAAI=</HashCode>
+      <FileName>Plugins\FillDataBase(TEST).cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.Plugins.SerializerControl" Collapsed="true">
+    <Position X="9.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIEAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Plugins\SerializerControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.Plugins.TempExchange&lt;T&gt;" Collapsed="true">
+    <Position X="13.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABABAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Plugins\TempExchange.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.Properties.Resources" Collapsed="true">
+    <Position X="8" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Итоговый_проект.Properties.Settings" Collapsed="true">
+    <Position X="11.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAIAAAAkABgAAAgCAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

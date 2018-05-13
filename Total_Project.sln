@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Итоговый проект", "Итоговый проект\Итоговый проект.csproj", "{5F6B875F-2EED-494D-B023-90C392FD5D22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Total_Project(OOPD-17)", "Итоговый проект\Total_Project(OOPD-17).csproj", "{5F6B875F-2EED-494D-B023-90C392FD5D22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5129DBF7-E8C1-41E4-AE29-0EF1D8B2F912}
 	EndGlobalSection
 EndGlobal

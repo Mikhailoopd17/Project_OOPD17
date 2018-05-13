@@ -25,6 +25,7 @@ namespace Итоговый_проект
         {
             bool identy = false;
             ControlDatabase autorization = new ControlDatabase();
+            
             if (autorization.AutorizationChek(tbName.Text, tbSname.Text, identy))
             {
                 mainMenu form2 = new mainMenu();  //создаем ссылку на 2 форму

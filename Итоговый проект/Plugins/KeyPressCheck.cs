@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -35,6 +36,22 @@ namespace Итоговый_проект
             }
             else
                 return true;
+        }
+        public bool CheckText(String Text)
+        {
+            Regex regex = new Regex(@"[A-Za-z0-9]{5,}");
+            MatchCollection matches = regex.Matches(Text);
+            if (matches.Count == 1)
+                return true;
+            else
+                return false;
+        }
+        public bool ChekInputText(KeyPressEventArgs e)
+        {
+            if (e.Handled)
+                return true;
+            else
+                return false;
         }
     }
 }

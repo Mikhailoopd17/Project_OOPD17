@@ -21,7 +21,7 @@ namespace Итоговый_проект
         {
             InitializeComponent();
             //контроль ввода символов в текстбоксы
-            tbRegLogin.KeyPress += new KeyPressEventHandler(chek1.CheckText);
+            //tbRegLogin.KeyPress += new KeyPressEventHandler(chek1.CheckText);
             tbRegPass1.KeyPress += new KeyPressEventHandler(chek1.CheckText);
             tbRegPass2.KeyPress += new KeyPressEventHandler(chek1.CheckText);
             tbRegSname.KeyPress += new KeyPressEventHandler(chek1.CheckText2);
@@ -66,6 +66,7 @@ namespace Итоговый_проект
         private void btnReg_Click(object sender, EventArgs e)
         {
             string fio;
+            KeyPressCheck logKey = new KeyPressCheck();
 
             if (tbRegName.Text == "" || tbRegSname.Text == "" || tbRegFname.Text == "") //проверяем на заполнение строк и сцепляем строки для получения ФИО
             {
@@ -84,13 +85,15 @@ namespace Итоговый_проект
                         MessageBox.Show("Заполните поле пароль", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     else
                     {
-                        if (tbRegLogin.Text != "") //проверяем на заполение поле логин
+                        if (logKey.CheckText(tbRegLogin.Text)) //проверяем на заполение поле логин
                         {
                             //поодключение к БД
                             ControlDatabase addUser = new ControlDatabase();
                             addUser.RegistrationUser(fio, tbRegLogin.Text, tbRegPass2.Text);
                             Close();
                         }
+                        else
+                            MessageBox.Show("Проверьте поле логин", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
