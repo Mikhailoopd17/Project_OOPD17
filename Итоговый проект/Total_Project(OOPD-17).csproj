@@ -110,7 +110,6 @@
     <Compile Include="Forms\ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Plugins\Coder.cs" />
     <Compile Include="Plugins\ControlDatabase.cs" />
     <Compile Include="Plugins\ControlViewTable.cs" />
     <Compile Include="Plugins\FillDataBase%28TEST%29.cs" />
@@ -139,7 +138,6 @@
     <Compile Include="Forms\ChildrenForm.Designer.cs">
       <DependentUpon>ChildrenForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Plugins\SerializerControl.cs" />
     <Compile Include="Plugins\TempExchange.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

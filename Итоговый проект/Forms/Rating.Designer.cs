@@ -47,8 +47,8 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.DGVsort.Location = new System.Drawing.Point(336, 18);
-            this.DGVsort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DGVsort.Location = new System.Drawing.Point(13, 50);
+            this.DGVsort.Margin = new System.Windows.Forms.Padding(4);
             this.DGVsort.Name = "DGVsort";
             this.DGVsort.Size = new System.Drawing.Size(440, 331);
             this.DGVsort.TabIndex = 0;
@@ -74,7 +74,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(59, 55);
+            this.label1.Location = new System.Drawing.Point(13, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(142, 19);
@@ -98,10 +98,10 @@
             "9",
             "10",
             "11"});
-            this.comboBox1.Location = new System.Drawing.Point(48, 101);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Location = new System.Drawing.Point(163, 15);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(180, 27);
+            this.comboBox1.Size = new System.Drawing.Size(43, 27);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -117,10 +117,10 @@
             "г",
             "д",
             "е"});
-            this.comboBox2.Location = new System.Drawing.Point(48, 205);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox2.Location = new System.Drawing.Point(341, 15);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(180, 27);
+            this.comboBox2.Size = new System.Drawing.Size(39, 27);
             this.comboBox2.TabIndex = 4;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
@@ -128,7 +128,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(59, 167);
+            this.label2.Location = new System.Drawing.Point(214, 18);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 19);
@@ -138,8 +138,8 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(664, 367);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(341, 389);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 34);
             this.button1.TabIndex = 5;
@@ -151,7 +151,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(788, 414);
+            this.ClientSize = new System.Drawing.Size(464, 428);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label2);
@@ -159,9 +159,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DGVsort);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Rating";
-            this.Text = "Rating";
+            this.Text = "Рейтинг учеников";
             ((System.ComponentModel.ISupportInitialize)(this.DGVsort)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

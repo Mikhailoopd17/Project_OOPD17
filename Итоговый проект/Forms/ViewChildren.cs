@@ -42,11 +42,34 @@ namespace Итоговый_проект
             }
             else if (Text == "Список родителей")
             {
+                string[] mas =
+                {
+                    "",
+                    "Мама",
+                    "Папа",
+                    "Брат",
+                    "Сестра",
+                    "Бабушка",
+                    "Дедушка",
+                    "Дядя",
+                    "Тетя",
+                    "Опекун"
+                };
+
                 listLoad.AddRange(control.GetDataList("Parents"));
                 nameTable = "Parents";
                 btnDel.Enabled = false;
                 lblLiter.Text = "Компания";
                 lblNumber.Text = "Должность";
+                lblMale.Text = "Родство";
+                comboBox1.Items.Clear();
+                comboBox1.Items.AddRange(mas);
+
+                btnDel.Enabled = false;
+                btnDelAll.Enabled = false;
+                btnReport.Enabled = false;
+                button1.Enabled = false;
+                Text = "Список родителей";
             }
             table.ViewTable(DGVtable, listLoad, nameTable);
         }
@@ -121,41 +144,44 @@ namespace Итоговый_проект
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            ControlDatabase control = new ControlDatabase();
-            if (Text == "Список учеников")
+            if (MessageBox.Show("Удалить ученика?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.Cancel)
+            { }
+            else
             {
-                int id = control.GetID("Childrens", DGVtable.CurrentRow.Cells[1].Value.ToString());
-                int[] idPar = control.GetID(id);
+                ControlDatabase control = new ControlDatabase();
+                if (Text == "Список учеников")
+                {
+                    int id = control.GetID("Childrens", DGVtable.CurrentRow.Cells[1].Value.ToString());
+                    int[] idPar = control.GetID(id);
 
-                control.Delete(id, "NoteKeys", "ChID");
-                control.Delete(id, "Childrens", "ID");
-                foreach (int i in idPar)
-                    control.Delete(i, "Parents", "ID");
-                //обновляем таблицу
-                listLoad.Clear();
-                ViewUpdate_Load(sender, e);
+                    control.Delete(id, "NoteKeys", "ChID");
+                    control.Delete(id, "Childrens", "ID");
+                    foreach (int i in idPar)
+                        control.Delete(i, "Parents", "ID");
+                    //обновляем таблицу
+                    listLoad.Clear();
+                    ViewUpdate_Load(sender, e);
 
-            }
-            else if (Text == "Список родителей")
-            {
-                
-                //int id = control.GetID("Parents", DGVtable.CurrentRow.Cells[1].Value.ToString());
-                //control.Delete(id, "Parents");
-                ////обновляем таблицу
-                //listLoad.Clear();
-                //ViewUpdate_Load(sender, e);
+                }
             }
         }
 
+
         private void btnDelAll_Click(object sender, EventArgs e)
         {
-            ControlDatabase control = new ControlDatabase();
-            control.Delete("NoteKeys");
-            control.Delete("Childrens");
-            control.Delete("Parents");
-            //обновляем таблицу
-            listLoad.Clear();
-            ViewUpdate_Load(sender, e);
+            if (MessageBox.Show("Удалить всех учеников?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.Cancel)
+            { }
+            else
+            {
+                ControlDatabase control = new ControlDatabase();
+                control.Delete("NoteKeys");
+                control.Delete("Childrens");
+                control.Delete("Parents");
+                //обновляем таблицу
+                listLoad.Clear();
+                ViewUpdate_Load(sender, e);
+            }
+
         }
 
         private void btnReport_Click(object sender, EventArgs e)
@@ -171,12 +197,12 @@ namespace Итоговый_проект
 
             ReportForm report = new ReportForm(childrenReport, parentReport1, parentReport2);
             report.Show();
-            //report.printButton_Click(sender, e);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ArrayList list = table.FilterTable(table.FilterTable(table.FilterTable(table.FilterTable(table.FilterTable(listLoad, comboBox1.Text, 1), txbLiterSearch.Text, 6), txbNumberSearch.Text, 5), txbFioSearch.Text, 0), txbBirthSearch.Text, 2);
+            ArrayList list = listLoad;
             ListPrint print = new ListPrint(list);
             print.ShowDialog();
         }

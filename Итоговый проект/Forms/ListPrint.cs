@@ -15,10 +15,14 @@ namespace Итоговый_проект.Forms
     public partial class ListPrint : Form
     {
         TempExchange<ArrayList> temp = new TempExchange<ArrayList>();
+        ControlViewTable tab = new ControlViewTable();
+
         public ListPrint(ArrayList arrayList)
         {
             InitializeComponent();
             temp.Get(arrayList);
+
+            ViewTable(DGV, arrayList);
         }
 
         private void PrintRow(object sender, System.Drawing.Printing.PrintPageEventArgs e, string mes, Font mesFont, float x, float y)
@@ -30,12 +34,11 @@ namespace Итоговый_проект.Forms
         private void button1_Click_1(object sender, EventArgs e)
         {
             printPreviewDialog1.ShowDialog();
-
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            ArrayList list = temp.Set();
+            ArrayList list = tab.FilterTable(tab.FilterTable(temp.Set(), comboBox2.Text, 6), comboBox1.Text, 5);
             Children ch = new Children();
             
             string[][] Mas = new string[list.Count][];
@@ -49,11 +52,11 @@ namespace Итоговый_проект.Forms
             Font mesFontSTitle = new Font("Times New Roman", 20, GraphicsUnit.Point);
             Font mesFontText = new Font("Times New Roman", 14, GraphicsUnit.Point);
 
-            String[] message = { "Список класса "+Mas[0][5]+ Mas[0][6], "___________________________________________________" };
+            String[] message = { "Список класса "+comboBox1.Text+ comboBox2.Text, "___________________________________________________" };
 
             String Table = "___________________________________________________";
-            String Column = "|    |                                                       |                                        |";
-            String[] messageTable = { string.Format(" {0}                     {1}                               {2}", "№", "ФИО", "Примечание") };
+            String Column = "|    |                                                              |                                 |";
+            String[] messageTable = { string.Format(" {0}                        {1}                               {2}", "№", "ФИО", "Примечание") };
 
 
             PrintRow(sender, e, message[0], mesFontTitle, 300, 50);
@@ -78,6 +81,58 @@ namespace Итоговый_проект.Forms
         private void printPreviewDialog1_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ViewTable(DGV, tab.FilterTable(tab.FilterTable(temp.Set(), comboBox2.Text, 6), comboBox1.Text, 5));
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ViewTable(DGV, tab.FilterTable(tab.FilterTable(temp.Set(), comboBox2.Text, 6), comboBox1.Text, 5));
+        }
+        public void ViewTable(DataGridView DGV, ArrayList listLoad)
+        {
+            Children child = new Children();
+            string[][] Mas = new string[listLoad.Count][];
+
+            for (int i = 0; i < listLoad.Count; i++)
+            {
+                child = (Children)listLoad[i];
+                Mas[i] = child.View();
+            }
+
+            if (listLoad.Count > 0)
+            {
+                DGV.RowCount = listLoad.Count;
+                DGV.ColumnCount = 3;
+
+                for (int k = 0; k < listLoad.Count; ++k)
+                {
+                    DGV.Rows[k].Cells[0].Value = k + 1;
+                    for (int j = 0; j < 7; ++j)
+                    {
+                        if (j == 0)
+                            DGV.Rows[k].Cells[j + 1].Value = Mas[k][j];
+
+                    }
+
+                }
+            }
+            else
+            {
+                DGV.RowCount = 1;
+                DGV.Rows[0].Cells[0].Value = "";
+                DGV.Rows[0].Cells[1].Value = "Ничего не найдено";
+            }
+
+            
         }
     }
 }

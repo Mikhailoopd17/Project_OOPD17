@@ -21,7 +21,6 @@
             this.btnOK = new System.Windows.Forms.Button();
             this.txbPosition = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txDateOfB = new System.Windows.Forms.MaskedTextBox();
             this.txbPhone = new System.Windows.Forms.MaskedTextBox();
             this.txbCompany = new System.Windows.Forms.TextBox();
@@ -109,16 +108,6 @@
             this.label1.Size = new System.Drawing.Size(85, 19);
             this.label1.TabIndex = 58;
             this.label1.Text = "Должность";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(406, 182);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(179, 17);
-            this.checkBox1.TabIndex = 56;
-            this.checkBox1.Text = "Совпадает с адресом ученика";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // txDateOfB
             // 
@@ -291,7 +280,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txbPosition);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.txDateOfB);
             this.Controls.Add(this.txbPhone);
             this.Controls.Add(this.txbCompany);
@@ -309,7 +297,7 @@
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCancel);
             this.Name = "AddParents";
-            this.Text = "AddParents";
+            this.Text = "Добавить родителя";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,7 +312,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.TextBox txbPosition;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.MaskedTextBox txDateOfB;
         private System.Windows.Forms.MaskedTextBox txbPhone;
         private System.Windows.Forms.TextBox txbCompany;

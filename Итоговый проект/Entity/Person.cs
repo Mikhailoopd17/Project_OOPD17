@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Итоговый_проект
 {
-    [Serializable]
     public abstract class Person
     {
         string Fio { get; set; }

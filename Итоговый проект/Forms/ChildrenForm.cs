@@ -117,6 +117,7 @@ namespace Итоговый_проект
         public AddChildren()
         {
             InitializeComponent();
+
         }
         public AddChildren(Children children, Parent par1, Parent par2)
         {
@@ -124,6 +125,7 @@ namespace Итоговый_проект
             _parent1 = par1;
             _parent2 = par2;
             InitializeComponent();
+            Text = "Редактировать ученика";
 
             string[] tempFio = childUpdate.getFio().Split(' ');
             txSnameChild.Text = tempFio[0];

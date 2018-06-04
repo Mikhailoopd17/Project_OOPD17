@@ -7,7 +7,6 @@ using System.Windows.Forms;
 
 namespace Итоговый_проект
 {
-    [Serializable]
     public class Children : Person
     {
         string Male { get; set; }

@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Итоговый_проект
 {
-    [Serializable]
     public class Parent : Person
     {
         string Proximity { get; set; }

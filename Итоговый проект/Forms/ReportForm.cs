@@ -14,6 +14,16 @@ namespace Итоговый_проект.Forms
 {
     public partial class ReportForm : Form
     {
+        string[] Pred ={"Математика",
+                        "Русский язык",
+                        "Литература",
+                        "Иностранный язык",
+                        "Физкультура",
+                        "История",
+                        "География",
+                        "Музыка",
+                        "ИЗО ",
+                        "ОБЖ"};
         TempExchange<Children> temp = new TempExchange<Children>();
         TempExchange<Parent> tempPar1 = new TempExchange<Parent>();
         TempExchange<Parent> tempPar2 = new TempExchange<Parent>();
@@ -24,6 +34,28 @@ namespace Итоговый_проект.Forms
             temp.Get(children);
             tempPar1.Get(parent1);
             tempPar2.Get(parent2);
+
+            string[] tempFio = children.getFio().Split(' ');
+            lblSname.Text = tempFio[0];
+            lblNmae.Text = tempFio[1];
+            lblFname.Text = tempFio[2];
+
+            lbladress.Text = children.getAdress();
+            lblClass.Text = children.getNumberClass() + children.getLiter();
+            lblPhone.Text = children.getPhone();
+            lblDate.Text = children.getBirth();
+
+
+            lblFirstParent.Text = parent1.getProximity() + " - " + parent1.getFio();
+            lblPhoneFparent.Text = parent1.getPhone();
+            lblCompanyFP.Text = parent1.getCompany() + ", " + parent1.getPosition();
+            lblDateFP.Text = parent1.getBirth();
+
+
+            lblSecondParent.Text = parent2.getProximity() + " - " + parent2.getFio();
+            lblPhoneSpare.Text = parent2.getPhone();
+            lblCompanySP.Text = parent2.getCompany() + ", " + parent2.getPosition();
+            lblDateSP.Text = parent2.getBirth();
         }
 
         private void printDocument1_PrintPage_1(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -137,7 +169,71 @@ namespace Итоговый_проект.Forms
 
         private void ReportForm_Load(object sender, EventArgs e)
         {
-
+            printRatingTable(Pred, DGVdata);
+            DGVdata_CellContentClick(sender, e);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void DGVdata_CellContentClick(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            for (int k = 0; k < DGVdata.RowCount; ++k)
+            {
+                for (int i = 1; i < DGVdata.ColumnCount; i++)
+                {
+                    DGVdata.Rows[k].Cells[i].Value = RandomInput(random.Next(-5, 5));
+                }
+
+            }
+            for (int j = 0; j < DGVdata.RowCount; j++)
+            {
+                DGVdata.Rows[j].Cells[5].Value = getMark(j);
+            }
+        }
+        private int RandomInput(int i)
+        {
+            Random rand = new Random();
+            int coun = Math.Abs(rand.Next(-200, 200) / (i + 10));
+            if (coun > 2 && coun < 6)
+                return coun;
+            else
+                return RandomInput(Math.Abs(rand.Next(-10 * coun, 10 * coun + 1)));
+        }
+
+        private double getMark(int k)
+        {
+            double mark = 0;
+            for (int i = 1; i < 5; i++)
+            {
+                int temp = Convert.ToUInt16(DGVdata.Rows[k].Cells[i].Value);
+                mark += temp;
+            }
+            return Math.Round(mark / 4, MidpointRounding.AwayFromZero);
+        }
+
+        public double GetMidmark()
+        {
+            double sum = 0;
+            for (int i = 0; i < 11; i++)
+            {
+                sum += RandomInput(1);
+            }
+            return sum / 11;
+        }
+        public void printRatingTable(string[] mas, DataGridView DGV)
+        {
+            DGV.RowCount = mas.Length;
+            DGV.ColumnCount = 6;
+
+            for (int k = 0; k < mas.Length; ++k)
+            {
+                DGV.Rows[k].Cells[0].Value = mas[k];
+            }
+        }
+
     }
 }
